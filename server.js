@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
+require('dotenv').config();
 const cors = require('cors')
-const PORT = 5000
 const router = require('./route/route')
 
 app.use(express.json())
@@ -12,6 +12,6 @@ app.get('/',(req,res)=>{
     res.send("This is the recipe api")
 })
 
-app.listen(PORT , ()=>{
+app.listen(process.env.PORT , ()=>{
     console.log(`listening to port ${PORT}`)
 })
