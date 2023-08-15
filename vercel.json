@@ -7,9 +7,7 @@
         }
     ],
     "routes":[
-        {
-            "src":"./(.*)",
-            "dest":"/"
-        }
+        { "src": "/recipe/(.*)", "dest": "server.js" },
+        { "src": "/(.*)", "dest": "server.js" } 
     ]
 }
